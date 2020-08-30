@@ -2,384 +2,120 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practical-9</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-9</title>
+    <link rel="stylesheet" href="../css_part/practical-9.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
-
-    html {
-      scroll-padding-top: 70px;
-      scroll-behavior: smooth;
-    }
-
-    #container {
-     
-      max-width: 1200px;
-    width: 100%;
-      padding: 15px;
-      margin: 0px auto;
-    }
-
-  
-
-    #header {
-      width: 1175px;
-      background-color: grey;
-      position: fixed;
-      top: 0;
-      height: 70px;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-   
-    #navBar {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-
-    #navBar>a {
-      
-      text-transform: uppercase;
-      display: inline-block;
-      padding: 10px 40px;
-      text-decoration: none;
-      color: white;
-      font-size: 24px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #navBar>a:hover {
-      background-color: white;
-      color: black;
-    }
-
-   
-
-    #banner {
-      margin-top: 70px;
-      height: 680px;
-      margin-bottom: 15px;
-      display: flex;
-      font-size: 40px;
-      color: white;
-    }
-
-    #banner {
-      background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
-      background-size: cover;
-      background-position: center;
-    }
-
-    #banner h2 {
-      margin: 20px 20px;
-      color: #fff;
-    }
-
-    h1 {
-      color: black;
-      font-size: 40px;
-      text-align: center;
-      padding: 25px 0px;
-    }
-
-  
-
-    #circle-container {
-      width: 100%;
-      margin: 15px auto;
-    }
-
-    #circle-container::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    .circle img {
-      height: 250px;
-      width: 250px;
-      border-radius: 50%;
-      background-color: goldenrod;
-      float: left;
-      margin-left: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-    }
-
-   
-    #sec2-container {}
-    
-
-    #sec2-container::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    #left-side {
-      width: 50%;
-      height: 550px;
-      background-color: gray;
-      float: left;
-      color: #fff;
-    }
-
-    #left-p>h2 {
-      text-align: left;
-      margin: 10px 5px;
-    }
-
-    #left-p>p {
-      font-size: 20px;
-      padding: 10px;
-      text-align: justify;
-      line-height: 28px;
-    }
-
-    #right-side {
-      width: 48%;
-      height: 550px;
-      float: right;
-    }
-
-    .artical {
-      height: 31%;
-      margin-bottom: 20px;
-      background-color: chocolate;
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: black;
-      overflow: hidden;
-    }
-
-    #p1 {
-      background-image: url("../images/p1.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    #p2 {
-      background-image: url("../images/p2.jpeg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    #p3 {
-      background-image: url("../images/p3.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    
-    #grid-container {
-      width: 100%;
-      margin: 15px auto;
-    }
-
-    #grid-container::after {
-      content: '';
-      display: block;
-      clear: both;
-    }
-
-    .grid {
-      width: 20%;
-      float: left;
-      margin-left: 50px;
-      background-color: lightgrey;
-      border-radius: 8px;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
-    }
-
-    .grid>img {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .grid>h4 {
-      margin: 0px 10px;
-      text-align: center;
-    }
-
-    .grid>p {
-      margin: 10px;
-      font-size: 15px;
-      text-align: justify;
-      line-height: 25px;
-      color: black;
-    }
-
-    .grid>a {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      color: #fff;
-      background-color: red;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    .grid>a:hover {
-      background-color: blue;
-    }
-
-  
-    #footer {
-      background-color: plum;
-      height: 100px;
-    }
-
-    #footer>p {
-      font-size: 16px;
-      color: black;
-      text-align: center;
-      padding: 20px;
-    }
-   
-  </style>
 </head>
 
 <body>
-  <div id="container">
-    <nav id="header">
-      <div id="navBar">
-       
-        <a href="#top">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#circle-container">Team </a>
-        <a href="#Technologies">Technologies</a>
-       <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <a name="top"></a>
+    <div class="navbar">
 
-    <div id="banner">
-      <h2>PRACTICAL - 9</h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+        <i class="fa fa-bars" ></i></label>
+        <ul class="menu">
+            <li>
+                <a href="#"> <i class="fa fa-home"><span> HOME</span>  </i></a>
+            </li>
+            <li><a href="#About-us"><i class="fa fa-user" ><span> ABOUT-US</span>  </i></a></li>
+            <li><a href="#TEAM"><i class="fa fa-group" ><span> TEAM</span></i></a></li>
+            <li><a href="#techno"><i class="fa fa-laptop" ><span> TECHNOLOGIES</span>  </i></a></li>
+            <li><a href="#Contact"><i class="fa fa-id-card" ><span> CONTACT</span>  </i></a></li>
+
+            <label for="chk" class="hide-btn"><i class="fa fa-times" ></i></label>
+        </ul>
+
     </div>
-    <div id="circle-container">
-      <h1>Team Members</h1>
-      <div class="circle"><img src="../images/1.png" alt="" /></div>
-      <div class="circle"><img src="../images/2.png" alt="" /></div>
-      <div class="circle"><img src="../images/3.png" alt="" /></div>
-      <div class="circle"><img src="../images/9.png" alt="" /></div>
+    <br>
+    <div class="banner">
+        <h1>PRACTICAL-9</h1>
     </div>
-    <div id="sec2-container">
-      <a name="about"></a>
-      <h1>About Us</h1>
-      <div id="left-side">
-        <div class="left-content">
-          <div id="left-p">
-            <h2>About Projects</h2>
-            <p>
-              temporibus similique sit tenetur quasi exercitationem! Repellat
-              obcaecati quibusdam iste explicabo laborum veritatis velit
-              accusantium animi dolorum nemo ut quam, quo cum in suscipit
-              fugiat minima corrupti voluptates tempora alias aspernatur esse
-              dolore iure? Libero iste quo nam sequi nulla, minima architecto
-              est cum expedita omnis enim culpa reiciendis nesciunt quod
-              deserunt, nostrum corporis tempore impedit veritatis ut
-              perspiciatis rerum. Amet, harum pariatur. Quo dolorum
-              necessitatibus eos beatae eveniet, earum cum blanditiis,
-              accusamus vitae, nisi voluptas dignissimos modi quibusdam aut
-              veniam deserunt accusantium possimus atque? Distinctio voluptas
-              nemo, fuga laboriosam perspiciatis eum debitis nesciunt quidem
-              iure ratione! Eaque ea eum maxime temporibus dolor nostrum, iure
-              enim, vero in atque quod animi! Mollitia alias magnam nisi
-              suscipit ab ducimus dolores provident. Distinctio veritatis
-              quaerat explicabo fuga neque culpa facere suscipit vel, totam
-              quasi!
-            </p>
-          </div>
+
+    <a name="TEAM"></a>
+    <h2>Team Members</h2>
+    <div class="team">
+        <div class="circle-box">
+            <div class="circle" id="c1"></div>
+            <div class="circle" id="c2"></div>
+            <div class="circle" id="c3"></div>
+            <div class="circle" id="c4"></div>
         </div>
-      </div>
-      <div id="right-side">
-        <div class="artical" id="p1">
-          <h2>Project-1</h2>
-        </div>
-        <div class="artical" id="p2">
-          <h2>Project-2</h2>
-        </div>
-        <div class="artical" id="p3">
-          <h2>Project-3</h2>
-        </div>
-      </div>
     </div>
-    <div id="grid-container">
-      <a name="Technologies"></a>
-      <h1>Technologies Used</h1>
-      <div class="grid">
-        <img src="https://imgur.com/joZlsqC.png" alt="" />
-        <h4>Introduction to HTML</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
-          illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
-          recusandae consequuntur!
-        </p>
 
-        <a href="../images/html.png">Read More</a>
-      </div>
-      <div class="grid">
-        <img src="https://imgur.com/8F89zk5.png" alt="" />
-        <h4>Introduction to CSS</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
-          illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
-          recusandae consequuntur!
-        </p>
+    <div class="about">
+        <a name="About-us"></a>
 
-        <a href="../images/CSS.jpg">Read More</a>
-      </div>
-      <div class="grid">
-        <img src="https://imgur.com/YWiaReD.png" alt="" />
-        <h4>Introduction to JavaScript</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
-          illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
-          recusandae consequuntur!
-        </p>
+        <h2>About us</h2>
+        <div class="outerbox">
+            <div class="innerleft">
+                <h3>About Projects</h3>
+                <br>
+                <p><b>
+                    Developed detailed project plans to track progress and improve efficiency.Prepared budgets based on project needs.Tracked spendings and project costs to stay within budget.Managed and supervised teams from multiple departments.Built strong relationships with stakeholders and customers.Monitored project progress and made adjustments as needed.Recruiters understand well that job success isn't only about experience. Many attributes can make a difference in an applicant.Once you understand those attributes and highlight them in your resume, your chances are as good as those of any senior candidate.The hiring company is looking for a project manager to handle specific tasks. You'll be able to find more details about that in the job application.Read it carefully, identify those duties, and prepare to include them in your resume.Now to be convincing, feature the specific skills that allow you to perform those tasks. And support that with your educational background and unique certificates.
+                </b></p>
+            </div>
+            <div class="innerright">
+                <div class="right" id="r1">
+                    <h1><a href="Practical-1.html">Practical-1</a></h1>
+                </div>
+                <div class="right" id="r2">
+                    <h1><a href="Practical-2.html">Practical-2</a></h1>
+                </div>
+                <div class="right" id="r3">
+                    <h1><a href="Practical-3.html">Practical-3</a></h1>
+                </div>
+            </div>
+        </div>
 
-        <a href="../images/js.png">Read More</a>
-      </div>
-      <div class="grid">
-        <img src="https://imgur.com/L0JabFG.jpg" alt="" />
-        <h4>Introduction to Bootstrap</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
-          illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
-          recusandae consequuntur!
-        </p>
 
-        <a href="../images/bootstrap.png">Read More</a>
-      </div>
+
     </div>
-    <a name="contact"></a>
-    <h1>Contact</h1>
-    <div id="footer">
-      <p>
-        Website Template for Practical-9 &copy;
-        <a href="https://beta-labs.in">Beta-labs</a><br /><br />
-        <a href="#top">Back to top</a>
-      </p>
-    </div>
-  </div>
+    <br>
+
+
+    <a name="techno"></a>
+    <h2>Technologies Used</h2>
+    <div class="techcon">
+        <div class="container">
+            <div class="box">
+                <img src="../images/html.png" alt="html image" width="100%">
+                <h3>Introduction to html</h3>
+                <p>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.Hypertext refers to the way in which Web pages.</p>
+                <a href="Practical_5_int/html.html">Read More</a>
+
+            </div>
+            <div class="box">
+                <img src="../images/CSS.jpg" alt="css image" width="100%">
+                <h3>Introduction to CSS</h3>
+                <p>CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is a markup language </p>
+                <a href="Practical_5_int/css.html">Read More</a>
+
+            </div>
+            <div class="box">
+                <img src="../images/js.png" alt="html image" width="100%">
+                <h3>Introduction to JavaScript</h3>
+                <p>JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations</p>
+                <a href="Practical_5_int/js.html">Read More</a>
+
+            </div>
+            <div class="box">
+                <img src="../images/bootstrap.png" alt="html image" width="100%">
+                <h3>Introduction to Bootstrap</h3>
+                <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based </p> <a href="practical_5_int/bootstrap.html">Read More</a>
+                <a href="Practical_5_int/bootstrap.html">Read More</a>
+            </div>
+        </div>
+    </div>>
+
+    <a name="Contact"></a>
+    <h2>Contact:</h2>
+    <br>
+    <h2>@kuldeep kumar</h2>
+    <h3><a href="#">Back to Top</a></h3>
+
 </body>
 
 </html>
