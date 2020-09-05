@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-10</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #d8e2dc;
+        }
+        
+        .header {
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            background-color: #212529;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header img {
+            height: 50px;
+            width: 70px;
+            line-height: 70px;
+            
+        }
+        
+        .header h1 {
+            line-height: 70px;
+            color: white;
+            margin-left: 15px;
+        }
+        
+        .content {
+            margin-top: 70px;
+            width: 100%;
+            padding: 15px 15px 0;
+            float: right;
+            transition: .8s;
+        }
+        
+        .content img {
+            width: 70%;
+            /*border-radius: 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        
+        .content p {
+            text-align: justify;
+        }
+        
+        .sidebar {
+            width: 20%;
+            height: 100vh;
+            position: fixed;
+            top: 70px;
+            background-color: #011627;
+            left: -100%;
+            transition: .8s;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+        }
+        
+        .sidebar ul li a {
+            display: block;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+            padding: 15px 25px;
+            transition: .5s;
+        }
+        
+        a i {
+            margin-right: 15px;
+        }
+        
+        .sidebar ul li a:hover {
+            border-left: 8px solid white;
+        }
+        
+        .social-links {
+            margin-top: 220px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+            border-top: 2px solid rgba(255, 255, 255, .1);
+            padding: 15px 25px;
+        }
+        
+        i {
+            color: white;
+        }
+        
+        .show-button,
+        .hide-button {
+            font-size: 40px;
+            color: white;
+            position: fixed;
+            top: 15px;
+            left: 40px;
+        }
+        
+        #chk {
+            display: none;
+        }
+        
+        .hide-button {
+            opacity: 0;
+        }
+        
+        #chk:checked~.sidebar {
+            left: 0;
+        }
+        
+        #chk:checked~.show-button {
+            opacity: 0;
+        }
+        
+        #chk:checked~.content {
+            width: 80%;
+        }
+        
+        #chk:checked~.hide-button {
+            opacity: 1;
+        }
+        
+        @media(max-width:700px) {
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .social-links {
+                margin-top: 200px;
+            }
+            .header h1 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../images/fullstack_logo1.png" alt="fullstack-logo">
+        <h1>Fullstack</h1>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-button">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-button">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="content">
+        <img src="../images/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="top-image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis beatae numquam ipsa harum, eligendi praesentium consequuntur asperiores quos pariatur sunt deleniti repudiandae nam dignissimos, explicabo modi hic officia doloribus id nostrum
+            dolor dolorem velit omnis? Eius repudiandae quibusdam odio ducimus, nostrum, repellendus porro accusantium necessitatibus laudantium dolorum quo minus enim! Necessitatibus ipsa voluptas deleniti quis optio vero ipsam beatae provident sed!
+            Repellat harum doloribus unde perspiciatis ea amet perferendis beatae, quidem assumenda adipisci consectetur totam iste praesentium dolor mollitia delectus modi consequatur voluptatibus. Debitis alias fugiat minima, sit fuga porro ut doloribus
+            ipsam quos rem fugit sapiente, quisquam sed vero voluptatibus et distinctio harum voluptatum. Odit sit quae, placeat inventore ab officia quod aliquam eveniet libero repellat neque magni dicta numquam, cum velit mollitia, non quaerat reprehenderit
+            incidunt labore aperiam tempore impedit? Non impedit odio molestias ducimus, culpa voluptatibus sit cumque corporis, magni, neque animi? Corporis ipsum obcaecati nulla omnis beatae fugit, quasi odio dolor, nam aspernatur facere recusandae
+            fugiat! Commodi impedit provident reprehenderit maiores deleniti laborum dicta, unde quibusdam dignissimos sapiente eum beatae iure, accusamus necessitatibus expedita voluptatum ex quo? Reiciendis dolore pariatur magni odit incidunt aliquid,
+            commodi, rem vero ut maiores quo culpa. Quidem voluptatibus inventore error quasi non nostrum! Error sunt laboriosam fugit consectetur quisquam magni. Eveniet totam quas error aspernatur facilis debitis tempore amet. Magni facilis rem eos?
+            Culpa, quidem? Eos deserunt voluptas porro, saepe dolore soluta assumenda quisquam repellendus vel ab consequatur hic nesciunt voluptatem aut facere aliquam nulla! Itaque ipsum aut accusantium dignissimos qui, voluptas voluptates reiciendis
+            natus quidem commodi amet incidunt perferendis libero nihil iste odio totam. Tenetur consequuntur nihil obcaecati ipsa dolorum nemo minima debitis magni fuga veniam laudantium facilis eligendi quis eum perferendis minus repellat, in voluptatibus
+            quia voluptates nostrum? Eligendi reiciendis quod enim soluta ipsam quibusdam consequatur pariatur optio? Quam explicabo vitae est modi, neque in quasi aperiam dolorum placeat reiciendis expedita molestiae alias voluptate architecto optio
+            architecto cupiditate est tempore ipsam distinctio asperiores aut, explicabo sequi, magnam quidem laudantium.</p>
+    </div>
+
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+            <li><a href="#"><i class="fa fa-user"></i><span>About</span></a></li>
+            <li><a href="#"><i class="fa fa-tasks"></i><span>Services</span></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i><span>Blog</span></a></li>
+            <li><a href="#"><i class="fa fa-id-card"></i><span>Contact</span></a></li>
+        </ul>
+        <div class="social-links">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-youtube-square"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
