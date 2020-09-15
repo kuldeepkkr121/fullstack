@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <title>Practical-13</title>
+    <style>
+        *{
+            
+            
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .heading{
+            width: 100%;
+            display : flex;
+            justify-content: center; 
+            color: blue;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+        
+        footer {
+            width: 100%;
+            
+            background-color: #26272b;
+        }
+        footer h2{
+            color: lightgrey;
+        }
+        
+        .sec-1{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 10px;
+
+        
+        }
+        .about{
+            width: 40%;
+            color: gray;
+        }
+        
+        .categories li{
+            list-style: none;
+            margin-bottom: 5px;
+            font-size: 16px;
+            
+        }
+        .categories li a{
+            text-decoration: none;
+            color: gray;
+        }
+        .categories li a:hover{
+            font: bold;
+            font-size: 18px;
+        }
+        .quickList li{
+            list-style: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+
+        }
+
+        .quickList li a{
+            text-decoration: none;
+            color: gray;
+        }
+        
+        .quickList li a:hover{
+            font: bold;
+            font-size: 18px;
+        }
+        .contactUs li{
+            list-style: none;
+            font-size: 16px;
+        }
+        .contactUs li a {
+            text-decoration: none;
+            color: gray;
+        }
+        .contactUs li a :hover{
+            font: bold;
+            font-size: 18px;
+        }
+        span{
+            font-size: 16px;
+            color: gray;
+            margin-bottom: 5px;
+        }
+        i{
+            margin-right: 10px;
+            margin-bottom: 5px;
+            color: grey;
+        }
+        .sec-2{
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+        .sec-2 h2{
+            margin-right: 15px;
+        }
+        .sec-2 a{
+            background-color: red;
+            width: 80px;
+            height: 50px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            text-decoration:none;
+        }
+        .sec-2 a:hover{
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+        }
+        .sec-3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sec-3 ul{
+            list-style: none;
+            display: inline-block;
+        }
+        .sec-3 ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .sec-3 i{
+            background-color: lightgrey;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .sec-3 a{
+            text-decoration: none;
+        }
+        .sec-3 a:hover{
+            font: bold;
+            font-size: 20px;
+
+        }
+        .sec-4 {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            height: 90px;
+        }
+        @media( max-width: 800px){
+            .sec-1{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            margin: 10px;
+            }
+
+            .about{
+                width: 100%;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="heading">
+        <h1>Responsive Footer</h1>
+    </section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>ABOUT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto repellat libero excepturi illo aperiam 
+                    accusamus at iusto dignissimos voluptas aspernatur saepe, quis neque, ex rem et perspiciatis necessitatibus adipisci?</p>
+            </section>
+            <section class="categories">
+                <h2>CATEGORIES</h2>
+                <ul>
+                    <li ><a href="#">C</a></li>
+                    <li ><a href="#">UI design</a></li>
+                    <li ><a href="#">PHP</a></li>
+                    <li ><a href="#">Java</a></li>
+                    <li ><a href="#">Android</a></li>
+                    <li ><a href="#">Hybrid Apps</a></li>
+
+                </ul>
+            </section>
+            <section class="quickList">
+                <h2>QUICKLIST</h2>
+                <ul>
+                    <li ><a href="#">About us</a></li>
+                    <li ><a href="#">Contact us</a></li>
+                    <li ><a href="#">Contribute</a></li>
+                    <li ><a href="#">Privacy Policy</a></li>
+                    <li ><a href="#">SiteMap</a></li>
+                    <li ><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="contactUs">
+                <h2>CONTACT US</h2>
+                <ul>
+                    <li><i class="fa fa-home"></i><span>SCO-75, chandigarh, india</span></li>
+                    <li><i class="fa fa-envelope"></i><span>betalabsindia@gmail.com</span></li>
+                    <li><i class="fa fa-mobile"></i><span>Mobile: 9729280731</span></li>
+                    <li><i class="fa fa-facebook-official"></i><a href="#">betalabsindia</a></li>
+                    
+
+                </ul>
+            </section>
+        </section>
+            <hr>
+            <section class="sec-2">
+                <h2>Register for Free</h2>
+                <a href="#">Sign-Up</a>
+            </section>
+            <hr>
+            <section class="sec-3">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </section>
+            <secction class="sec-4">
+                <p>Copyright © 2020 All rights reserved by
+                    <a href="#">betalabs</a>
+                </p>
+            </secction>
+        </section>
+    </footer>
+
+</body>
+</html>
