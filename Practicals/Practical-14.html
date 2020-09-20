@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: rgb(218, 60, 60);
+        }
+        
+        body h1 {
+            margin-top: 4%;
+            text-align: center;
+            color: gold;
+            font-size: 3rem;
+        }
+        
+        .main {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 3%;
+        }
+        
+        .first {
+            background-color: #fff;
+            height: 485px;
+            width: 27%;
+            border-radius: 5px;
+            border: 2px solid #554f4f80;
+            box-shadow: 2px 5px 5px rgba(1, 1, 1, 0.5);
+            position: relative;
+        }
+        /*First Card*/
+        
+        .gradient {
+            width: 100%;
+            height: 130px;
+            background-image: linear-gradient(to top right, rgba(247, 7, 99, 0.7) 30%, rgba(123, 29, 177, 0.7));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        .gradient h2 {
+            position: absolute;
+            top: 15px;
+        }
+        
+        .gradient p {
+            position: absolute;
+            bottom: 25px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .gradient p i {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+        
+        .form-first {
+            width: 100%;
+            padding: 2.3rem 1.5rem;
+            margin-bottom: 0.7rem;
+        }
+        
+        .form-first label {
+            margin-bottom: 0.3rem;
+            color: rgba(247, 7, 99, 0.5);
+            font-weight: bold;
+        }
+        
+        form input {
+            width: 96%;
+            border: none;
+            border-bottom: 2px solid darkgrey;
+            opacity: 0.5;
+            margin-bottom: 2rem;
+            font-size: 17px;
+        }
+        
+        .form-first input:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(247, 7, 99);
+            height: auto;
+            transition: all 0.3s;
+            padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+        }
+        
+        .form-first h5 {
+            color: grey;
+            text-align: right;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .first-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem 0.5rem;
+        }
+        
+        .first-footer button {
+            padding: 0.7rem;
+            cursor: pointer;
+            font-size: 17px;
+            color: white;
+            background-color: #5e5b5b;
+            border-radius: 2rem;
+            border: none;
+        }
+        
+        .first-footer p {
+            font-size: 13px;
+            color: grey;
+            font-weight: 600;
+        }
+        /*Second card */
+        
+        .signup {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f35b5b;
+            font-size: 1.2rem;
+        }
+        
+        .form-second {
+            width: 100%;
+            padding: 1.5rem 1.5rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-second label {
+            margin-bottom: 0.3rem;
+            color: rgb(236, 59, 5, 0.5);
+            font-weight: bold;
+        }
+        
+        .form-second input:focus {
+            outline: none;
+            border-bottom: 2px solid #df2a2a;
+            height: auto;
+            transition: all 0.3s;
+            padding: 0.5rem 0.5rem 0.2rem;
+        }
+        
+        form input[type=checkbox] {
+            height: auto;
+            margin-left: -9rem;
+            margin-right: -8rem;
+        }
+        
+        .form-second span {
+            color: grey;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .form-second a {
+            color: rgb(119, 174, 238);
+        }
+        
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .buttons button {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            font-weight: 600;
+            background-color: rgb(216, 60, 81);
+            border-radius: 2.5rem;
+            border: none;
+            box-shadow: 2px 3px 5px rgba(1, 1, 1, 0.5);
+        }
+        
+        .buttons p {
+            color: grey;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .second-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding: 1.5rem 1.5rem 2rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(241, 56, 81);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .second-footer i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        /*Third Card*/
+        
+        .signin {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(10, 70, 233);
+            font-size: 1.2rem;
+        }
+        
+        .form-third {
+            width: 100%;
+            padding: 1.5rem 1.5rem 0.2rem;
+        }
+        
+        .form-third label {
+            margin-bottom: 0.3rem;
+            color: rgb(0, 0, 255, 0.5);
+            font-weight: bold;
+        }
+        
+        .form-third input:focus {
+            outline: none;
+            border-bottom: 2px solid #0000ff;
+            height: auto;
+            transition: all 0.3s;
+            padding: 0.5rem 0.5rem 0.2rem;
+        }
+        
+        .form-third h5 {
+            color: rgb(7, 155, 204);
+            text-align: right;
+        }
+        
+        .form-third button {
+            width: 92%;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            border-radius: 3rem;
+            background-image: linear-gradient(to right, rgba(77, 156, 230, 0.8) 30%, rgba(100, 7, 250, 0.8), rgba(38, 0, 255, 0.8));
+            color: white;
+            display: block;
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            border: none;
+            box-shadow: 2px 3px 5px rgba(0, 112, 216, 0.5);
+        }
+        
+        .form-third p {
+            text-align: center;
+            font-size: 13px;
+            color: grey;
+        }
+        
+        .third-footer {
+            width: 100%;
+            padding: 1.5rem 1.5rem 1rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .third-footer a {
+            display: block;
+            padding: 0.4rem 1.2rem;
+            box-shadow: 2px 3px 5px rgba(33, 108, 194, 0.5);
+            border-radius: 2.5rem;
+        }
+        
+        .third-footer i {
+            font-size: 1.2rem;
+            color: #4949d8;
+        }
+        /*Responsiveness*/
+        
+        @media(max-width:400px) {
+            .main {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 8%;
+            }
+            .first {
+                background-color: #fff;
+                height: 485px;
+                width: 90%;
+                border-radius: 5px;
+                border: 2px solid #554f4f80;
+                box-shadow: 2px 5px 5px rgba(1, 1, 1, 0.5);
+                position: relative;
+                margin-bottom: 1.5rem;
+            }
+            .first-footer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 1.5rem 1.5rem 0.5rem;
+            }
+            .first-footer button {
+                width: 90%;
+                padding: 0.7rem;
+                cursor: pointer;
+                font-size: 17px;
+                color: white;
+                background-color: #5e5b5b;
+                border-radius: 2rem;
+                border: none;
+                margin-bottom: 0.5rem;
+            }
+            form input[type=checkbox] {
+                height: auto;
+                margin-left: -7rem;
+                margin-right: -6rem;
+            }
+            .buttons {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .buttons button {
+                width: 90%;
+                margin-bottom: 0.5rem;
+                cursor: pointer;
+            }
+            .second-footer {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                padding: 1.5rem 1.5rem 1rem;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgb(241, 56, 81);
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Form Templates</h1>
+    <section class="main">
+
+        <!--First Form-->
+        <section class="first">
+            <div class="gradient">
+                <h2>Log in</h2>
+                <p>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google-plus"></i>
+                </p>
+            </div>
+            <form action="action.php" class="form-first">
+                <label for="">Your email</label>
+                <input type="email">
+                <label for="">Your Password</label>
+                <input type="password">
+                <h5>Forgot <a href="#">Password?</a></h5>
+            </form>
+            <footer class="first-footer">
+                <button type="submit">Log In</button>
+                <p> Don't have an account? <a href="#">Sign up</a></p>
+            </footer>
+        </section>
+
+
+        <!--Second Form-->
+        <section class="first">
+            <div class="signup">
+                <h2>Sign Up</h2>
+            </div>
+            <form action="action.php" class="form-second">
+                <label for="">Your email</label>
+                <input type="email">
+                <label for="">Your Password</label>
+                <input type="password">
+                <br>
+                <input type="checkbox" name="terms" id="check"><span>Accept the <a href="#">Terms and Conditions</a></span>
+                <div class="buttons">
+                    <button>Sign Up</button>
+                    <p>Have an account? <a href="#">Log in</a></p>
+                </div>
+            </form>
+            <footer class="second-footer">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google-plus"></i>
+            </footer>
+        </section>
+        <section class="first">
+            <div class="signin">
+                <h2>Sign In</h2>
+            </div>
+            <form action="action.php" class="form-third">
+                <label for="">Your email</label>
+                <input type="email">
+                <label for="">Your Password</label>
+                <input type="password">
+                <h5>Forgot <a href="#">Password?</a></h5>
+                <button type="submit">Sign in</button>
+                <p><b>Or Sign in with:</b></p>
+            </form>
+            <footer class="third-footer">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </footer>
+        </section>
+    </section>
+</body>
+
+</html>
